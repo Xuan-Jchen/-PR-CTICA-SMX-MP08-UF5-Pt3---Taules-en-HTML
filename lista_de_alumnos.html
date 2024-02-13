@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        table {
+            background-color: white;
+        }
+        th, td {
+            width: 24em;
+            padding: 1em;
+        }
+        th{
+            text-align: left;
+            border-bottom: 0.01em solid gray;
+        }
+
+        img {
+            width: 5em;
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .fin p:first-child{
+            padding-top: 2em;
+            text-align: center;
+            color: white;
+        }
+        .fin p:last-child{
+            margin: auto;
+            color: black;
+            width: 8em;
+            background-color: rgb(238, 227, 227);
+            transition-duration: 0.5s;
+            border-radius: 2em;
+        }
+        .fin p:hover:last-child{
+            box-shadow: 0 0 10px 8px rgb(72, 222, 235);
+
+        }
+    </style>
+    <title>Llistat d'alumnes</title>
+</head>
+
+<body>
+    <h1 style="color: white;">Llistat d'alumnes</h1>
+    <table id="myRow">
+        <tr>
+            <th></th>
+            <th>Nom</th>
+            <th>Correu</th>
+            <th>Gitlab</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+    </table>
+    <script>
+        var rows = [
+            "https://avatars.githubusercontent.com/u/91731830?s=400&v=4", "David Rodríguez Pellicer", "david@elpuig.xeill.net", "https://github.com/davidelpuig",
+            "https://avatars.githubusercontent.com/u/146839409?v=4", "Cristian Cano Andrade", "ccano@elpuig.xeill.net",	"https://github.com/ccano1992",
+            "https://avatars.githubusercontent.com/u/147502852?v=4", "Wenjing Chen", "wchen@elpuig.xeill.net", "https://github.com/WeJ-Ch",
+            "https://avatars.githubusercontent.com/u/147503159?s=400&v=4", "Jiayi Chen", "jiayichen@elpuig.xeill.net", "https://github.com/Xuan-Jchen",
+            "https://avatars.githubusercontent.com/u/147502081?v=4", "Carlos Arroyo", "carroyo@elpuig.xeill.net", "https://github.com/arrroyoo",
+            "https://avatars.githubusercontent.com/u/147502148?s=400&v=4", "Ángel González", "angelgonzalez@elpuig.xeill.net", "https://github.com/Angelillo4",
+            "https://avatars.githubusercontent.com/u/147502500?s=400&v=4", "Justin Álvarez", "jalvarez@elpuig.xeill.net", "https://github.com/justinalvarezmarin",
+            "https://avatars.githubusercontent.com/u/147502628?s=400&u=45182e10214c724fa2e771d04c6a2bd87c90aa89&v=4", "Pau Ojeda Gallego",	"pojeda@elpuig.xeill.net", "https://github.com/holasoypauojedagallego",
+            "https://avatars.githubusercontent.com/u/147502245?s=400&v=4", "Albert Rodriguez Alvarez", "albertrodriguez@elpuig.xeill.net", "https://github.com/RebiKk99/"
+        ];
+
+        var cells = document.getElementById("myRow").getElementsByTagName("td");
+        for (var i = 0; i < rows.length; i++) {
+            var element;
+            if (rows[i].includes("avatar")) {
+                // 如果链接包含 "avatar"，创建<img>元素
+                element = document.createElement("img");
+                element.src = rows[i];
+            }else if (rows[i].includes("https://git") || rows[i].includes("@")){
+                element = document.createElement("a");
+                element.href = rows[i];
+                element.textContent = rows[i];
+            }else {
+                // 如果链接不包含 "avatar"，创建文本
+                element = document.createTextNode(rows[i]);
+            }
+            cells[i].appendChild(element);
+        }
+    </script>
+    <div class="fin">
+        <p>La horari del estudiante y lista de los profesores</p>
+        <p><a href="horari.html">Horari</a></p>
+    </div>
+</body>
+
+</html>

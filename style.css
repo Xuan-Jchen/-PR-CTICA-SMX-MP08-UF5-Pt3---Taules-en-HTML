@@ -1,0 +1,87 @@
+body {
+    margin: 20px;
+    background-color:SteelBlue;
+  }
+
+  .head {
+    text-align: center;
+    color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+.horari {
+    border-collapse: collapse;
+    margin: auto;
+    font-weight: bolder;
+}
+.horari th:first-child, .horari td:first-child{
+    background-color: white;
+}
+  td, th{
+    width: 10em;
+    height: 5em;
+    text-align: center;
+  }
+  
+td, th {
+    border: 0.1em solid black;
+  }
+  thead tr th{
+    background-color: #c0c0c0;
+  }
+  .mod {
+    width: 61.7em;
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 3em;
+  }
+  .mod th {
+    background-color: #9f9f9f;
+  }
+  .mod th:last-child {
+    color: white;
+  }
+  .mod tr:nth-child(even) {
+    background-color: #d2e1f2;
+  }
+  .mod tr:nth-child(odd) {
+    background-color: #a3caf6;
+  }
+  .mod th:first-child {
+    color: white;
+  }
+#tr_espe{
+    height:  1em;
+    font-size: 0.1em;
+    border: 1em solid;
+}
+#tr_espe td:last-child {
+  background-color: white;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+.border {
+  font-weight: bold;
+}
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fin p:first-child{
+  text-align: center;
+}
+.fin p:last-child{
+  margin: auto;
+  color: black;
+  width: 11em;
+  border-radius: 10%; 
+  background-color: rgb(238, 227, 227);
+  transition-duration: 0.5s;
+  border-radius: 1em; 
+
+}
+.fin p:hover:last-child{
+  box-shadow: 0 0 10px 5px rgb(196, 245, 249);
+
+}
